@@ -5,14 +5,29 @@
   }
 }
 
-@media (min-width : 1200px) {
-  .text {
-    font-size: 18px;
+@media (max-width : 800px) {
+  .showcase__logo__wrapper {
+    width: 60px;
+    height: 60px;
+    left: calc(50% - 30px);
+  }
+
+  .showcase__content-wrapper {
+    padding: var(--padding) 0;
+  }
+
+  .showcase-carousel__item p {
+    font-size: 15px;
+    bottom: -50px;
   }
 }
 
-@media (min-width : 1400px) {
-  .text {
-    font-size: 22px;
+@media (max-width : 500px) {
+  .showcase__content-wrapper {
+    padding: calc(var(--padding) * .2) 0;
   }
+
+  .showcase-carousel__item p {
+    position: absolute;
+    bottom: 40px;
 }
