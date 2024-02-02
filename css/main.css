@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --regular-text: 16px;
   --lineheight: 1.65;
   --userfont: outfit-c, sans-serif;
@@ -71,7 +71,7 @@ body, html {
   position: relative;
   z-index: 2;
   height: 100%;
-  padding: var(--padding) 0;
+  padding: calc(var(--padding) * 1.2) 0;
 }
 
 .showcase__content-wrapper::before {
@@ -91,10 +91,10 @@ body, html {
 .showcase__logo__wrapper {
   position: absolute;
   z-index: 1;
-  width: calc(var(--index) * 4);
-  height: calc(var(--index) * 4);
-  top: calc(var(--index) * 1.2);
-  left: calc(50% - (var(--index) * 4)/2);
+  width: 120px;
+  height: 120px;
+  top: 40px;
+  left: calc(50% - 60px);
   background-image: url(../images/logo.png);
   background-size: cover;
   background-position: center;
@@ -125,11 +125,11 @@ body, html {
 
 .showcase-carousel__item p {
   position: absolute;
-  bottom: calc(var(--index) * -1.5);
+  bottom: -85px;
   width: 100%;
   font-family: outfit-c, sans-serif;
-  font-size: calc(var(--index) * 0.9);
-  color: rgba(255, 255, 255, .75);
+  font-size: 30px;
+  color: rgba(255, 255, 255, .5);
   text-shadow: rgb(58 78 94) 0 0 10px;
 }
 
@@ -199,14 +199,18 @@ body, html {
 }
 
 .showcase-navigation > *::before {
-  content: url(../images/arrow.svg);
+  content: '';
   opacity: 0;
   transition: opacity .75s ease-out;
   position: absolute;
   transform: rotate(-180deg);
-  left: calc(var(--index) * 3);
+  left: calc(var(--index) * 1.5);
   top: 50%;
-  zoom: 50%;
+  background-image: url(../images/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: calc(var(--index) * 2);
+  height: calc(var(--index) * 2);
 }
 
 .showcase-navigation > *:hover::before {
@@ -215,7 +219,7 @@ body, html {
 
 .showcase-navigation__next::before {
   transform: rotate(0deg);
-  right: calc(var(--index) * 3);
+  right: calc(var(--index) * 1.5);
   left: auto;
 }
 
